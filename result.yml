@@ -1,0 +1,79 @@
+openapi: 3.0.0
+info:
+  title: Phase One
+  version: 1.0.0
+servers:
+  - url: http://{{url}}
+paths:
+  /movies:
+    get:
+      tags:
+        - default
+      summary: GetAllMovie
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /movies/1:
+    get:
+      tags:
+        - default
+      summary: GetMovieById
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /movies/create:
+    post:
+      tags:
+        - default
+      summary: CreateMovie
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                id: '3'
+                isbn: '4362887'
+                title: Movie Third
+                director:
+                  firstname: John
+                  lastname: Max
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /movies/298498081:
+    put:
+      tags:
+        - default
+      summary: UpdateMovie
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                isbn: '4362887'
+                title: Movie Three
+                director:
+                  firstname: John
+                  lastname: Max
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    delete:
+      tags:
+        - default
+      summary: DeleteMovie
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}

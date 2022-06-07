@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "cc8d58a4-45dc-4b46-8f79-b24a69bf72e6",
+		"name": "GoCrud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10974618"
+	},
+	"item": [
+		{
+			"name": "GetAllMovie",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/movies",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMovieById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/movies/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateMovie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": \"3\",\n        \"isbn\": \"4362887\",\n        \"title\": \"Movie Third\",\n        \"director\": {\n            \"firstname\": \"John\",\n            \"lastname\": \"Max\"\n        }\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/movies/create",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateMovie",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"isbn\": \"4362887\",\n        \"title\": \"Movie Three\",\n        \"director\": {\n            \"firstname\": \"John\",\n            \"lastname\": \"Max\"\n        }\n    }"
+				},
+				"url": {
+					"raw": "{{url}}/movies/298498081",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies",
+						"298498081"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteMovie",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/movies/298498081",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies",
+						"298498081"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
